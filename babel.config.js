@@ -7,8 +7,8 @@ module.exports = {
 				root: ['./src'],
 				extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
 				alias: {
-					'@lib/*': './src/lib/',
-					'@assets/*': './src/assets',
+					'@lib': './src/lib/',
+					'@assets': './src/assets',
 					'@feature/app': './src/feature/app/shared',
 					'@feature/home': './src/feature/home/shared',
 					'@feature/favorite': './src/feature/favorite/shared'

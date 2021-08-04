@@ -1,8 +1,8 @@
 import React from 'react'
 import { BottomTabBarProps } from '@react-navigation/bottom-tabs/lib/typescript/src/types'
 import { Pressable, StyleSheet, View } from 'react-native'
-import HomeIcon from '../../../assets/nav/home.svg'
-import FavoriteIcon from '../../../assets/nav/favorite.svg'
+import HomeIcon from '@assets/nav/home.svg'
+import FavoriteIcon from '@assets/nav/favorite.svg'
 import { RoutesEnum } from '../lib/Routes'
 
 const Navigation = ({ state, navigation }: BottomTabBarProps) => {
