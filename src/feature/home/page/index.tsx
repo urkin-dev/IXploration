@@ -3,15 +3,17 @@ import { StyleSheet, Text, View } from 'react-native'
 
 const HomePage = () => {
 	return (
-		<View>
-			<Text style={styles.Default}>Home Page</Text>
+		<View style={styles.Container}>
+			<Text style={{ color: '#000' }}>Home Page</Text>
 		</View>
 	)
 }
 
 const styles = StyleSheet.create({
-	Default: {
-		color: 'green'
+	Container: {
+		justifyContent: 'center',
+		alignItems: 'center',
+		flex: 1
 	}
 })
 

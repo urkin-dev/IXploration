@@ -3,15 +3,17 @@ import { StyleSheet, Text, View } from 'react-native'
 
 const FavoritePage = () => {
 	return (
-		<View>
-			<Text style={styles.Default}>Favorite Page</Text>
+		<View style={styles.Container}>
+			<Text style={{ color: '#000' }}>Favorite Page</Text>
 		</View>
 	)
 }
 
 const styles = StyleSheet.create({
-	Default: {
-		color: 'red'
+	Container: {
+		justifyContent: 'center',
+		alignItems: 'center',
+		flex: 1
 	}
 })
 
