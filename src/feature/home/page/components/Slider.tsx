@@ -12,7 +12,12 @@ const Slider = () => {
 	return (
 		<View style={styles.SliderContainer}>
 			<SectionTitleContainer title="Popular Nearest You" linkText="View All" linkRef={RoutesEnum.Popular} />
-			<ScrollView horizontal style={{ marginTop: 20 }} showsHorizontalScrollIndicator={false}>
+			<ScrollView
+				horizontal
+				style={{ marginTop: 20 }}
+				showsHorizontalScrollIndicator={false}
+				snapToInterval={300}
+				decelerationRate="normal">
 				{dataExp.appartments.map((a, idx) => (
 					<ApartmentCard
 						key={idx}
