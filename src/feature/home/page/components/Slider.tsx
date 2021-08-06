@@ -22,6 +22,7 @@ const Slider = () => {
 						reviewValue={a.reviewValue}
 						price={a.price}
 						pricePrefix={a.pricePrefix}
+						horizontal={false}
 					/>
 				))}
 			</ScrollView>

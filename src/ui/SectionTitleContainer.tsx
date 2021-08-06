@@ -1,17 +1,18 @@
 import React from 'react'
 import { Link } from '@react-navigation/native'
 import { RoutesEnum } from 'feature/app/lib/Routes'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, ViewStyle } from 'react-native'
 
 interface IProps {
 	title: string
 	linkText?: string
 	linkRef?: RoutesEnum
+	style?: ViewStyle
 }
 
-const SectionTitleContainer = ({ title, linkText, linkRef }: IProps) => {
+const SectionTitleContainer = ({ title, linkText, linkRef, style }: IProps) => {
 	return (
-		<View style={styles.TitleContainer}>
+		<View style={{ ...styles.TitleContainer, ...style }}>
 			<Text style={styles.SectionTitle}>{title}</Text>
 			<Link style={styles.SectionLink} to={`/${linkRef}`}>
 				{linkText}

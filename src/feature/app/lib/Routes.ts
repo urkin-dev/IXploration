@@ -1,5 +1,6 @@
 export enum RoutesEnum {
 	Home = 'Home',
 	Favorites = 'Favorite',
-	Popular = 'Popular'
+	Popular = 'Popular',
+	Recommended = 'Recommended'
 }
