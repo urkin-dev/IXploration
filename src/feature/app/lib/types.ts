@@ -10,7 +10,7 @@ export type RootTabParamList = {
 
 export type RootStackParamList = {
 	BottomTabsNav: RootTabParamList
-	ApartmentPage: undefined
+	ApartmentPage: { id: string }
 }
 
 //Home Screen navigation props
@@ -35,4 +35,16 @@ type FavoriteScreenNavigationProp = CompositeNavigationProp<
 export interface IFavoriteNavigationProp {
 	route: FavoriteScreenRouteProp
 	navigation: FavoriteScreenNavigationProp
+}
+
+//Favorite Screen navigation props
+type ApartmentScreenRouteProp = RouteProp<RootStackParamList, 'ApartmentPage'>
+type ApartmentScreenNavigationProp = CompositeNavigationProp<
+	StackNavigationProp<RootStackParamList, 'ApartmentPage'>,
+	BottomTabNavigationProp<RootTabParamList>
+>
+
+export interface IApartmentNavigationProp {
+	route: ApartmentScreenRouteProp
+	navigation: ApartmentScreenNavigationProp
 }

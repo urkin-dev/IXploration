@@ -8,10 +8,11 @@ import { IApartment } from 'api'
 interface IProps extends IApartment {
 	isLastChild: boolean
 	horizontal: boolean
-	onPress?: () => void
+	onPress?: (id: string) => void
 }
 
 const ApartmentCard = ({
+	id,
 	isLastChild,
 	title,
 	subtitle,
@@ -19,21 +20,27 @@ const ApartmentCard = ({
 	price,
 	pricePrefix,
 	horizontal,
-	onPress
+	onPress,
+	photos
 }: IProps) => {
+	const onCardPress = () => {
+		if (onPress) onPress(id)
+	}
+
 	return (
 		<TouchableOpacity
-			onPress={onPress}
+			activeOpacity={0.8}
+			onPress={onCardPress}
 			style={{
 				...styles.CardContainer,
 				marginRight: !horizontal && !isLastChild ? 20 : 0,
 				marginBottom: horizontal && !isLastChild ? 20 : 0,
 				flexDirection: horizontal ? 'row' : 'column'
 			}}>
-			<View style={{ padding: horizontal ? 20 : 0 }}>
+			<View style={{ padding: horizontal ? 20 : 0, justifyContent: 'center', alignItems: 'center' }}>
 				<Image
 					style={{ ...styles.StyledImage, width: horizontal ? 128 : 300, height: horizontal ? 128 : 200 }}
-					source={require('@assets/Apartment.jpg')}
+					source={{ uri: photos[0] }}
 				/>
 			</View>
 			<View style={styles.CardContent}>

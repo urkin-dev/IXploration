@@ -7,8 +7,11 @@ import { SectionTitleContainer } from 'ui'
 import { ApartmentCard } from '@feature/apartment'
 import { dataExp } from 'api'
 
-//TODO: Create json object with data for apartment
-const Slider = () => {
+interface IProps {
+	onCardPress?: (id: string) => void
+}
+
+const Slider = ({ onCardPress }: IProps) => {
 	return (
 		<View style={styles.SliderContainer}>
 			<SectionTitleContainer title="Popular Nearest You" linkText="View All" linkRef={RoutesEnum.Popular} />
@@ -20,14 +23,17 @@ const Slider = () => {
 				decelerationRate="normal">
 				{dataExp.appartments.map((a, idx) => (
 					<ApartmentCard
-						key={idx}
+						key={a.id}
+						id={a.id}
 						isLastChild={idx === dataExp.appartments.length - 1}
 						title={a.title}
 						subtitle={a.subtitle}
 						reviewValue={a.reviewValue}
 						price={a.price}
 						pricePrefix={a.pricePrefix}
+						photos={a.photos}
 						horizontal={false}
+						onPress={onCardPress}
 					/>
 				))}
 			</ScrollView>

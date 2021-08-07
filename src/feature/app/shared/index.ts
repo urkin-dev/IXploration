@@ -1,5 +1,5 @@
 import App from '../App'
-import { IHomeNavigationProp, IFavoriteNavigationProp } from '../lib/types'
+import { IHomeNavigationProp, IFavoriteNavigationProp, IApartmentNavigationProp } from '../lib/types'
 
 export { App }
-export type { IHomeNavigationProp, IFavoriteNavigationProp }
+export type { IHomeNavigationProp, IFavoriteNavigationProp, IApartmentNavigationProp }
