@@ -4,7 +4,7 @@ import { StyleSheet } from 'react-native'
 import { View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import { SectionTitleContainer } from 'ui'
-import ApartmentCard from './ApartmentCard'
+import { ApartmentCard } from '@feature/apartment'
 import { dataExp } from 'api'
 
 //TODO: Create json object with data for apartment

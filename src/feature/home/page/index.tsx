@@ -1,16 +1,19 @@
 import { IHomeNavigationProp } from '@feature/app'
 import { RoutesEnum } from 'feature/app/lib/Routes'
 import React from 'react'
-import { useRef } from 'react'
-import { NativeSyntheticEvent, ScrollView, StyleSheet, TextInputFocusEventData, View } from 'react-native'
+import { ScrollView, StyleSheet, View } from 'react-native'
 import { TextInput } from 'react-native-gesture-handler'
 import { SectionTitleContainer } from 'ui'
-import ApartmentCard from './components/ApartmentCard'
+import { ApartmentCard } from '@feature/apartment'
 import Slider from './components/Slider'
 
 interface IProps extends IHomeNavigationProp {}
 
 const HomePage = ({ route, navigation }: IProps) => {
+	const onApartmentPress = () => {
+		navigation.navigate('ApartmentPage')
+	}
+
 	return (
 		<ScrollView style={StyleSheet.absoluteFill}>
 			<View style={styles.HomeContainer}>
@@ -30,6 +33,7 @@ const HomePage = ({ route, navigation }: IProps) => {
 					reviewValue={5}
 					isLastChild={false}
 					horizontal
+					onPress={onApartmentPress}
 				/>
 				<ApartmentCard
 					title="Some title"
@@ -39,6 +43,7 @@ const HomePage = ({ route, navigation }: IProps) => {
 					reviewValue={5}
 					isLastChild={false}
 					horizontal
+					onPress={onApartmentPress}
 				/>
 				<ApartmentCard
 					title="Some title"
@@ -48,6 +53,7 @@ const HomePage = ({ route, navigation }: IProps) => {
 					reviewValue={5}
 					isLastChild={false}
 					horizontal
+					onPress={onApartmentPress}
 				/>
 				<ApartmentCard
 					title="Some title"
@@ -57,6 +63,7 @@ const HomePage = ({ route, navigation }: IProps) => {
 					reviewValue={5}
 					isLastChild
 					horizontal
+					onPress={onApartmentPress}
 				/>
 			</View>
 		</ScrollView>

@@ -11,7 +11,8 @@ module.exports = {
 					'@assets': './src/assets',
 					'@feature/app': './src/feature/app/shared',
 					'@feature/home': './src/feature/home/shared',
-					'@feature/favorite': './src/feature/favorite/shared'
+					'@feature/favorite': './src/feature/favorite/shared',
+					'@feature/apartment': './src/feature/apartment/shared'
 				}
 			}
 		]

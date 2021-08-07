@@ -8,11 +8,22 @@ import { IApartment } from 'api'
 interface IProps extends IApartment {
 	isLastChild: boolean
 	horizontal: boolean
+	onPress?: () => void
 }
 
-const ApartmentCard = ({ isLastChild, title, subtitle, reviewValue, price, pricePrefix, horizontal }: IProps) => {
+const ApartmentCard = ({
+	isLastChild,
+	title,
+	subtitle,
+	reviewValue,
+	price,
+	pricePrefix,
+	horizontal,
+	onPress
+}: IProps) => {
 	return (
-		<View
+		<TouchableOpacity
+			onPress={onPress}
 			style={{
 				...styles.CardContainer,
 				marginRight: !horizontal && !isLastChild ? 20 : 0,
@@ -49,7 +60,7 @@ const ApartmentCard = ({ isLastChild, title, subtitle, reviewValue, price, price
 					</TouchableOpacity>
 				</View>
 			</View>
-		</View>
+		</TouchableOpacity>
 	)
 }
 
