@@ -33,7 +33,15 @@ const App = () => {
 		<NavigationContainer>
 			<Stack.Navigator initialRouteName="BottomTabsNav">
 				<Stack.Screen name="BottomTabsNav" component={BottomTabsNav} options={DEFAULT_SCREEN_OPTIONS} />
-				<Stack.Screen name="ApartmentPage" component={ApartmentPage} />
+				<Stack.Screen
+					name="ApartmentPage"
+					component={ApartmentPage}
+					options={{
+						title: '',
+						headerTransparent: true,
+						headerTintColor: '#4976E9'
+					}}
+				/>
 			</Stack.Navigator>
 		</NavigationContainer>
 	)
