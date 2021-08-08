@@ -5,6 +5,7 @@ import { useState } from 'react'
 import { useRef } from 'react'
 import { useEffect } from 'react'
 import { Animated, Dimensions, StyleSheet, View, Text, Image } from 'react-native'
+import BottomDrawer from './components/BottomDrawer'
 
 const { width, height } = Dimensions.get('screen')
 
@@ -66,9 +67,7 @@ const ApartmentPage = ({ route, navigation }: IProps) => {
 						))}
 					</Animated.ScrollView>
 					{data && <Indicator data={data.photos} scrollX={scrollX} />}
-					<View style={{ flex: 0.1 }}>
-						<Text>Here will be drawer</Text>
-					</View>
+					<BottomDrawer />
 				</>
 			) : (
 				<Text>Loading</Text>
